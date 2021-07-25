@@ -1,13 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
-import NextLink from 'next/link';
 
 import { useTheme, makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import { AppBar, Toolbar } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
-import MuiLink from '@material-ui/core/Link';
+
+import Link from './Link';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -62,28 +62,22 @@ export function Header(props: Props) {
       <Container maxWidth="md" className={classes.container}>
         <Toolbar className={classes.toolbar}>
           <Typography noWrap className={classes.title}>
-            <NextLink href="/" passHref>
-               <MuiLink>
-                 {title}
-               </MuiLink>
-            </NextLink>
+            <Link href="/">
+              {title}
+            </Link>
           </Typography>
           <Button color="inherit">
             <Typography className={classes.menu}>
-              <NextLink href="/about" passHref>
-                 <MuiLink>
-                   About
-                 </MuiLink>
-              </NextLink>
+              <Link href="/about">
+                About
+              </Link>
             </Typography>
           </Button>
           <Button color="inherit">
             <Typography className={classes.menu}>
-              <NextLink href="/blog" passHref>
-                 <MuiLink>
-                   Blog
-                 </MuiLink>
-              </NextLink>
+              <Link href="/blog">
+                Blog
+              </Link>
             </Typography>
           </Button>
         </Toolbar>

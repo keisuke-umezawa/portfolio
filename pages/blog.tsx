@@ -10,7 +10,6 @@ import {
 } from "@material-ui/core";
 import { useTheme, makeStyles, Theme } from "@material-ui/core/styles";
 
-import { Header } from '../src/components/header';
 import contents from "./blog_contents.json";
 
 const useStyle = makeStyles({
@@ -23,11 +22,9 @@ const useStyle = makeStyles({
 
 export default function Blog() {
   const classes = useStyle(useTheme());
-  const title = "Umechan Portfolio";
 
   return (
     <div className={classes.root}>
-      <Header title={title} />
       <Container maxWidth="sm">
         <Box my={4}>
           <Typography variant="h4" component="h1" gutterBottom={true}>

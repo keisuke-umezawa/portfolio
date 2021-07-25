@@ -9,8 +9,6 @@ import { IconContext } from "react-icons";
 import { FaTwitterSquare } from 'react-icons/fa';
 import { GoMarkGithub } from 'react-icons/go';
 
-import { Header } from '../src/components/header';
-
 const useStyle = makeStyles({
   root: (props: Theme) => ({
     paddingTop: props.spacing(10),
@@ -21,11 +19,9 @@ const useStyle = makeStyles({
 
 export default function About() {
   const classes = useStyle(useTheme());
-  const title = "Umechan Portfolio";
 
   return (
     <div className={classes.root}>
-      <Header title={title} />
       <Container maxWidth="sm">
         <Box my={4}>
           <Typography variant="h4" component="h1" gutterBottom>
